@@ -1,0 +1,13 @@
+{
+	"name": "wmdbsystems/fluidlaravel",
+	"description": "Laravel integration for TYPO3 Fluid",
+	"license": ["LGPL-3.0+"],
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"FoT3\\FluidLaravel\\": "Classes/"
+		}
+	},
+	"minimum-stability": "dev"
+}
