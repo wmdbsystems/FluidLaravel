@@ -2,7 +2,22 @@
 	"name": "wmdbsystems/fluidlaravel",
 	"description": "Laravel integration for TYPO3 Fluid",
 	"license": ["LGPL-3.0+"],
+	"authors": [
+		{
+			"name": "Frank Nägler",
+			"email": "frank.naegler@typo3.org"
+		},
+		{
+			"name": "Mathias Schreiber",
+			"email": "mathias.schreiber@typo3.org"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"typo3fluid/fluid": "dev-master"
+	},
 	"require-dev": {
+		"laravel/framework": "5.1.*"
 	},
 	"autoload": {
 		"psr-4": {
