@@ -53,7 +53,7 @@ class ServiceProvider extends ViewServiceProvider
     {
         $configPath = __DIR__ . '/../config/fluidlaravel.php';
 
-        $this->mergeConfigFrom($configPath, 'fluidlaravel');
+        $this->mergeConfigFrom($configPath, 'fluid');
     }
 
     /**
@@ -127,7 +127,7 @@ class ServiceProvider extends ViewServiceProvider
         $this->app->bindIf(
             'fluid',
             function () {
-                $fluid = new Adapter(
+                return new Adapter(
                     $this->app['fluid.options'],
                     $this->app
                 );
