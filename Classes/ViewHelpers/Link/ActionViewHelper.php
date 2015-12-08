@@ -48,7 +48,8 @@ class ActionViewHelper extends AbstractTagBasedViewHelper
         try {
             $uri = action(ucfirst($this->arguments['controller']) . 'Controller@get' . ucfirst($action));
         } catch (\InvalidArgumentException $e) {
-            $uri = '#noYetDefined';
+            var_dump('No route found for ' . ucfirst($this->arguments['controller']) . 'Controller@get' . ucfirst($action));
+            $uri = '';
         }
         if (isset($this->arguments['arguments'])) {
             $uri .= $this->addArgumentsToUri($this->arguments['arguments']);

@@ -22,7 +22,7 @@ class ResourceViewHelper extends AbstractViewHelper
      */
     public function render()
     {
-        $path = '/' . $this->appPath . '/' . $this->arguments['path'];
+        $path = '/' . $this->arguments['path'];
         return $path;
     }
 }
