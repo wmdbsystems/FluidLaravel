@@ -77,6 +77,7 @@ class FormViewHelper extends AbstractFormFieldViewHelper
         $this->registerTagAttribute('onsubmit', 'string', 'JavaScript: On submit of the form');
         $this->registerTagAttribute('action', 'string', 'Specifies the action');
         $this->registerTagAttribute('controller', 'string', 'Specifies the controller');
+        $this->registerArgument('additionalAttributes', 'array', '');
 
         $this->registerUniversalTagAttributes();
     }
@@ -567,11 +568,10 @@ class FormViewHelper extends AbstractFormFieldViewHelper
         if (strtolower($this->arguments['method']) === 'get') {
             return '';
         }
-        if (!$this->securityContext->isInitialized() || !$this->authenticationManager->isAuthenticated()) {
-            return '';
-        }
-        $csrfToken = $this->securityContext->getCsrfProtectionToken();
+//        if (!$this->securityContext->isInitialized() || !$this->authenticationManager->isAuthenticated()) {
+//            return '';
+//        }
 
-        return '<input type="hidden" name="__csrfToken" value="' . htmlspecialchars($csrfToken) . '" />' . chr(10);
+        return '<input type="hidden" name="_token" value="' . htmlspecialchars(\csrf_token()) . '" />' . chr(10);
     }
 }
