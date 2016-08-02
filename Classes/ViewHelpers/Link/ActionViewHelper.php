@@ -27,6 +27,7 @@ class ActionViewHelper extends AbstractTagBasedViewHelper
         $this->registerTagAttribute('action', 'string', 'Specifies the action');
         $this->registerTagAttribute('controller', 'string', 'Specifies the controller');
         $this->registerArgument('arguments', 'array', 'GET parameters');
+        $this->registerArgument('data', 'array', 'GET parameters');
     }
 
     /**
