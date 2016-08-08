@@ -69,7 +69,7 @@ class ActionViewHelper extends AbstractTagBasedViewHelper
                 if (is_array($argument)) {
                     $argumentsToAddToQueryString[] = $this->implodeArrayForUrl($index, $argument);
                 } else {
-                    $argumentsToAddToQueryString[] = $index . '=' . $argument;
+                    $argumentsToAddToQueryString[] = '&' . $index . '=' . $argument;
                 }
             }
         }
